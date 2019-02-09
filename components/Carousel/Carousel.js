@@ -1,34 +1,15 @@
 class Carousel {
     constructor (carousel){
         this.carousel = carousel;
-        /*  
-            <div class="carousel">
-                <div class="left-button"><</div>
-                <img src="./assets/carousel/mountains.jpeg" />
-                <img src="./assets/carousel/computer.jpeg" />
-                <img src="./assets/carousel/trees.jpeg" />
-                <img src="./assets/carousel/turntable.jpeg" />
-                <div class="right-button">></div>
-            </div>*/
-
-        this.images = this.carousel.querySelectorAll('img');
-        /*  
-            <img class="active-img" src="./assets/carousel/mountains.jpeg" />
-            <img src="./assets/carousel/computer.jpeg" />
-            <img src="./assets/carousel/trees.jpeg" />
-            <img src="./assets/carousel/turntable.jpeg" />
-        */
-
+        this.images = this.carousel.querySelectorAll('img'); //all img nodes
         this.right = this.carousel.querySelector('.right-button'); //<div class="right-button"><</div>
         this.left = this.carousel.querySelector('.left-button'); //<div class="left-button"><</div>
-
         this.index = 0;
-        this.images[this.index].style.display = 'flex';
-
-        this.right.addEventListener('click', () => this.right());
-        this.left.addEventListener('click', () => this.left());
+        this.images[this.index].style.display = 'flex'; //should display the first image index - not currently working for some reason
+        this.right.addEventListener('click', () => this.rightClick());
+        this.left.addEventListener('click', () => this.leftClick());
     }
-    right(){   
+    rightClick(){   
         this.index++;
         if (this.index === 4){
             this.index = 0;
@@ -36,9 +17,9 @@ class Carousel {
         this.images.forEach(image => image.style.display = 'none');
         this.images[this.index].style.display = 'flex';
         // this.images.forEach(image => image.classList.remove('active-img'));
-        // this.images[this.imageCounter].classList.add('active-img');
+        // this.images[this.index].classList.add('active-img');
     }
-    left(){
+    leftClick(){
         this.imageCounter--;
         if (this.index < 0){
             this.index = 3;
@@ -46,11 +27,12 @@ class Carousel {
         this.images.forEach(image => image.style.display = 'none');
         this.images[this.index].style.display = 'flex';
         // this.images.forEach(image => image.classList.remove('active-img'));
-        // this.images[this.imageCounter].classList.add('active-img');
+        // this.images[this.index].classList.add('active-img');
     }
 }
 let carousel = document.querySelector('.carousel');
 let newCarousel = new Carousel(carousel);
+console.log('testing');
 
 
 
