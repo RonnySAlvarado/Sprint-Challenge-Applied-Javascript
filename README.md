@@ -30,15 +30,15 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
-1. What is the DOM?
+1. What is the DOM? Without being too textbook, it is a pseudo-clone of the html webpage that we can make changes to without permanently changing the source html file. This allows different users to experience a webpage differently depending on how they interact with it.
 
-2. What is an event?
+2. What is an event? An event are actions taken once the event listener has triggered.
 
-3. What is an event listener?
+3. What is an event listener? An even tlistener is an object that is "listening" for an event to trigger such as clicking.
 
-4. Why would we convert a NodeList into an Array?
+4. Why would we convert a NodeList into an Array? In order to use array methods (though you are able to use forEach on a nodelist)
 
-5. What is a component?
+5. What is a component? Components are a combination of HTML/CSS/JS for the sake of being reused many times throughout a website/application. Many sites/applications consist of multiple components that do something really well such as cards, panels, tabs, links, dropdowns, etc.
 
 ### Git Set up
 
