@@ -21,7 +21,7 @@ class Carousel {
         // this.images[this.index].classList.add('active-img');
     }
     leftClick(){
-        this.imageCounter--;
+        this.index--;
         if (this.index < 0){
             this.index = 3;
         }
