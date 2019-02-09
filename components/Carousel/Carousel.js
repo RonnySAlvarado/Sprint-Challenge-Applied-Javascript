@@ -5,7 +5,8 @@ class Carousel {
         this.right = this.carousel.querySelector('.right-button'); //<div class="right-button"><</div>
         this.left = this.carousel.querySelector('.left-button'); //<div class="left-button"><</div>
         this.index = 0;
-        this.images[this.index].style.display = 'flex'; //should display the first image index - not currently working for some reason
+        this.images[this.index].style.display = 'flex'; 
+        // this.images[this.index].classList.add('active-img'); 
         this.right.addEventListener('click', () => this.rightClick());
         this.left.addEventListener('click', () => this.leftClick());
     }
@@ -32,7 +33,6 @@ class Carousel {
 }
 let carousel = document.querySelector('.carousel');
 let newCarousel = new Carousel(carousel);
-console.log('testing');
 
 
 
